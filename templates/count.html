@@ -1,0 +1,16 @@
+<h1>There are {{ count }} words in your text</h1>
+
+<a href="{% url 'home' %}">Start Again</a>
+
+<h2>Your Text:</h2>
+{{ fulltext }} <!--pulls the value from the key fulltext (views.py)-->
+
+<h2>Word Count:</h2>
+
+<!--key : word, value : counttotal, we loop through each word in the list worddictionary and print out the word and it's count  -->
+{% for word, counttotal in sortedwords %}
+
+{{ word }} : {{ counttotal }}
+<br />
+
+{% endfor %}

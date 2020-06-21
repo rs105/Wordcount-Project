@@ -1,0 +1,16 @@
+<h1>Word Count</h1>
+<!--action : url ofthe next page i.e. the count page in this case-->
+<!--textarea : area where the user enters the words-->
+<!--input  : provides a button to submit (type) once done-->
+<!--url 'count' : takes in the name='count' from the path views.count and refers to the url linked to it-->
+
+<a href="{% url 'about' %}">About</a>
+
+<form action="{% url 'count' %}">
+  <br />
+  <textarea cols="40" rows="5" name="fulltext"></textarea>
+  <br />
+  <input type="submit" value="Count!" />
+  <br />
+  <br />
+</form>
